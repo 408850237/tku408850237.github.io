@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hw7</title>
+    <script language="javascript">
+      function Greeting() {
+        //定義函式
+        var UserName = prompt(
+          'Input your name to enter the calculator page',
+          ''
+        );
+        alert(UserName + ' welcome');
+      }
+      Greeting(); //呼叫函式
+    </script>
+
+    <script language="javascript">
+      function Calcuator() {
+        const fnum = parseFloat(prompt('Input first number: ', ''));
+        const operator = prompt('Input the operator: ', '');
+        const snum = parseFloat(prompt('Input second number: ', ''));
+        let result;
+
+        if (operator == '+') {
+          result = fnum + snum;
+        } else if (operator == '-') {
+          result = fnum - snum;
+        } else if (operator == '*') {
+          result = fnum * snum;
+        } else {
+          result = fnum / snum;
+        }
+
+        window.alert(fnum + ' ' + operator + ' ' + snum + ' = ' + result);
+      }
+    </script>
+
+    <script language="javascript">
+      function C2F() {
+        var DegreeC = prompt('Input the temperature in °C: ', '');
+        var DegreeF = DegreeC * 1.8 + 32;
+        window.alert(DegreeC + '°C -> ' + DegreeF + '°F');
+      }
+    </script>
+
+    <script language="javascript">
+      function F2C() {
+        var DegreeF = prompt('Input the temperature in °F: ', '');
+        var DegreeC = (DegreeF - 32) / 1.8;
+        window.alert(DegreeF + '°F -> ' + DegreeC + '°C');
+      }
+    </script>
+
+    <script language="javascript">
+      function P2Kg() {
+        var Pounds = prompt('Input the weight in pounds: ', '');
+        var Kg = Pounds * 0.45359237;
+        window.alert(Pounds + 'pounds = ' + Kg + ' Kg');
+      }
+    </script>
+
+    <script language="javascript">
+      function Kg2P() {
+        var Kg = prompt('Input the weight in Kg: ', '');
+        var Pounds = Kg / 0.45359237;
+        window.alert(Kg + 'Kg = ' + Pounds + ' Pounds');
+      }
+    </script>
+
+    <script language="javascript">
+      function Exit() {
+        window.close();
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Welcome to the Calcuator & Unit Convertion!</h1>
+    <input
+      type="BUTTON"
+      id="b1"
+      value="Mini Calcuator"
+      onclick="javascript:Calcuator();"
+    />
+
+    <input type="BUTTON" id="b1" value="°C -> °F" onclick="javascript:C2F();" />
+    <input type="BUTTON" id="b1" value="°F -> °C" onclick="javascript:F2C();" />
+
+    <input
+      type="BUTTON"
+      id="b1"
+      value="Pounds -> Kg"
+      onclick="javascript:P2Kg();"
+    />
+    <input
+      type="BUTTON"
+      id="b1"
+      value="Kg -> Pounds"
+      onclick="javascript:Kg2P();"
+    />
+
+    <input type="BUTTON" id="b1" value="Exit" onclick="javascript:Exit();" />
+  </body>
+</html>
